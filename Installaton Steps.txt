@@ -1,0 +1,87 @@
+Client Machine:
+	paths: ArcGIS, python, inspections
+	installs: python, adobe, excel
+	Folder: Inspections in same folder as ArcGIS
+	libs: conda install arcgis 
+
+
+Development Machine:
+
+install Anaconda	(as admin)
+	https://developers.arcgis.com/python/guide/install-and-set-up/#Install-using-Conda
+	https://www.continuum.io/downloads
+	add to system path => C:\ProgramData\Anaconda3
+	add to system path => C:\ProgramData\Anaconda3\scripts
+
+create environment - install python3.5
+	c:\>conda create -n myenv python=3.5
+	activate myenv
+
+update pip
+	#python -m pip install -U pip setuptools
+	#pip install setuptools
+
+pip install pyinstaller
+
+
+install excel reader, ArcREST, reportlab, pymsgbox								
+	C:\Users\cse682\AppData\Local\Continuum\Anaconda3\Scripts>	(as admin)
+		pip install xlrd
+		pip install arcrest										
+		pip install reportlab
+		pip install pymsgbox
+
+install arcgis
+	C:\Users\cse682\AppData\Local\Continuum\Anaconda3\Scripts>	(as admin)
+		conda install -c esri arcgis
+
+install kivy
+	https://kivy.org/docs/installation/installation.html
+	https://kivy.org/docs/installation/installation-windows.html
+
+	C:\WINDOWS\system32>	(as user - thru error when attempted as admin - not sure why I started from this directroy)
+		python --version	(verify python version)
+		
+		pip install 	docutils 
+				kivy.deps.sdl2 
+				kivy.deps.glew 
+				kivy
+				kivy_examples
+
+		#python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+		#python -m pip install kivy
+		#python -m pip install kivy_examples
+		
+Compile error:
+
+25420 WARNING: stderr:     ^
+ SyntaxError: 'yield' inside async function
+25420 WARNING: stderr: SyntaxError: 'yield' inside async function
+
+	https://stackoverflow.com/questions/43163201/pyinstaller-syntax-error-yield-inside-async-function-python-3-5-1
+
+	pip install jinja2==2.8.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
